@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hexasecure Technologies - Professional IT Training & Placement</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Define showPage function globally before page loads
+        function showPage(pageId) {
+            // Hide all page sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active from all nav buttons
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show the target page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Add active to the clicked button
+            if (window.event && window.event.target) {
+                window.event.target.classList.add('active');
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
     <style>
         * {
             margin: 0;
@@ -79,6 +107,7 @@
             transition: all 0.3s ease;
             font-family: 'Poppins', sans-serif;
             cursor: pointer;
+            outline: none;
         }
 
         .nav-link:hover {
@@ -961,12 +990,12 @@
     <!-- Navigation Bar -->
     <nav class="navbar" id="navbar">
         <div class="nav-slider">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#courses" class="nav-link">Courses</a>
-            <a href="#internship" class="nav-link">Internship</a>
-            <a href="#placement" class="nav-link">Placement</a>
-            <a href="#about" class="nav-link">About Us</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <button type="button" class="nav-link active" onclick="showPage('home')">Home</button>
+            <button type="button" class="nav-link" onclick="showPage('courses')">Courses</button>
+            <button type="button" class="nav-link" onclick="showPage('internship')">Internship</button>
+            <button type="button" class="nav-link" onclick="showPage('placement')">Placement</button>
+            <button type="button" class="nav-link" onclick="showPage('about')">About Us</button>
+            <button type="button" class="nav-link" onclick="showPage('contact')">Contact</button>
         </div>
     </nav>
 
@@ -986,8 +1015,8 @@
                 <h1 style="font-size: 2rem;">Transform Your Tech Career</h1>
                 <p>Empowering Future Tech Leaders Through Excellence in Training, Innovation in Learning, and Guaranteed Career Success</p>
                 <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; margin-top: 3rem;">
-                    <img src="/mnt/user-data/uploads/WhatsApp_Image_2026-01-02_at_6_36_10_PM.jpeg" alt="ISO 9001:2015 Certified" style="height: 100px; width: auto; filter: brightness(0.9);">
-                    <img src="/mnt/user-data/uploads/IMG_2602.PNG" alt="MSME Registered" style="height: 100px; width: auto; filter: brightness(0.9);">
+                    <img src="./WhatsApp_Image_2026-01-02_at_6_36_10_PM.jpeg" alt="ISO 9001:2015 Certified" style="height: 100px; width: auto; filter: brightness(0.9);">
+                    <img src="./IMG_2602.PNG" alt="MSME Registered" style="height: 100px; width: auto; filter: brightness(0.9);">
                 </div>
             </div>
         </div>
@@ -1651,31 +1680,6 @@
         const pageSections = document.querySelectorAll('.page-section');
         const navbar = document.getElementById('navbar');
         const pageTransition = document.getElementById('pageTransition');
-
-        // Page Navigation
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetPage = link.getAttribute('href').substring(1);
-
-                pageTransition.classList.add('active');
-
-                setTimeout(() => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    link.classList.add('active');
-
-                    pageSections.forEach(section => {
-                        section.classList.remove('active');
-                        if (section.id === targetPage) {
-                            section.classList.add('active');
-                        }
-                    });
-
-                    window.scrollTo({ top: 0, behavior: 'instant' });
-                    pageTransition.classList.remove('active');
-                }, 300);
-            });
-        });
 
         // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
