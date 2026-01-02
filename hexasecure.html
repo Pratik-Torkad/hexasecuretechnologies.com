@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexasecure Technologies - Professional IT Training & Placement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #141414;
+            --card-bg: #1a1a1a;
+            --accent-gold: #d4af37;
+            --accent-blue: #00d4ff;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #666666;
+            --border-color: #2a2a2a;
+            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            --gradient-blue: linear-gradient(135deg, #00d4ff 0%, #0080ff 100%);
+            --shadow-gold: 0 0 40px rgba(212, 175, 55, 0.3);
+            --shadow-blue: 0 0 40px rgba(0, 212, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation Bar - CENTERED DESIGN */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            top: 10px;
+        }
+
+        .nav-slider {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            padding: 0.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-link {
+            padding: 0.75rem 1.75rem;
+            background: transparent;
+            border: none;
+            border-radius: 50px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+        }
+
+        .nav-link.active {
+            background: var(--gradient-gold);
+            color: var(--primary-bg);
+            font-weight: 600;
+        }
+
+        /* Page Content Sections */
+        .page-section {
+            display: none;
+            min-height: 100vh;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.1) 0%, transparent 70%),
+                        radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+        }
+
+        .hero-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(var(--border-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .hero .company-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: var(--accent-gold);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease 0.6s backwards;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.8s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-blue);
+            color: var(--primary-bg);
+            border: none;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 3rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-blue);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            background: var(--gradient-blue);
+            border-color: var(--accent-blue);
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .feature-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .feature-list li {
+            padding: 0.7rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .feature-list li::before {
+            content: '→';
+            color: var(--accent-blue);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--secondary-bg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 80px 3rem;
+            margin: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background: var(--border-color);
+        }
+
+        .stat-card:last-child::after {
+            display: none;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Programs Grid */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .program-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-blue);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .program-card:hover::before {
+            opacity: 0.03;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 30px 80px rgba(0, 212, 255, 0.15);
+        }
+
+        .program-header {
+            background: var(--secondary-bg);
+            padding: 3rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .program-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-header h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .program-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .program-body {
+            padding: 3rem;
+        }
+
+        .program-body ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .program-body li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .program-body li:last-child {
+            border-bottom: none;
+        }
+
+        .program-body li::before {
+            content: '✓';
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .program-meta {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .meta-item {
+            flex: 1;
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--accent-blue);
+            font-size: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent-blue);
+            transform: translateX(10px);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover .contact-icon {
+            background: var(--gradient-blue);
+            border-color: var(--accent-blue);
+        }
+
+        .contact-details h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .contact-details p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .contact-form h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            background: var(--primary-bg);
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 50px 3rem 30px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-blue);
+            transform: translateX(5px);
+        }
+
+        .footer-logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: var(--gradient-blue);
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-certifications {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-cert {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .footer-cert-icon {
+            color: var(--accent-gold);
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .section {
+                padding: 80px 2rem;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                top: 10px;
+                left: 1rem;
+                right: 1rem;
+                transform: none;
+                width: auto;
+            }
+
+            .nav-slider {
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                padding: 0.4rem;
+            }
+
+            .nav-slider::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-link {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.3rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .features-grid,
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .stat-card::after {
+                display: none;
+            }
+        }
+
+        /* Loading Animation */
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--primary-bg);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-transition.active {
+            display: flex;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--gradient-blue);
+            padding: 4rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .highlight-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--primary-bg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            color: rgba(10, 10, 10, 0.8);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-slider">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#courses" class="nav-link">Courses</a>
+            <a href="#internship" class="nav-link">Internship</a>
+            <a href="#placement" class="nav-link">Placement</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Transition -->
+    <div class="page-transition" id="pageTransition">
+        <div class="loader"></div>
+    </div>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page-section active">
+        <!-- Hero -->
+        <div class="hero">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Professional IT Training & Placement</div>
+                <h1 class="company-name">HEXASECURE TECHNOLOGIES</h1>
+                <h1 style="font-size: 2rem;">Transform Your Tech Career</h1>
+                <p>Empowering Future Tech Leaders Through Excellence in Training, Innovation in Learning, and Guaranteed Career Success</p>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; margin-top: 3rem;">
+                    <img src="/mnt/user-data/uploads/WhatsApp_Image_2026-01-02_at_6_36_10_PM.jpeg" alt="ISO 9001:2015 Certified" style="height: 100px; width: auto; filter: brightness(0.9);">
+                    <img src="/mnt/user-data/uploads/IMG_2602.PNG" alt="MSME Registered" style="height: 100px; width: auto; filter: brightness(0.9);">
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- COURSES PAGE -->
+    <section id="courses" class="page-section">
+        <div class="hero" style="min-height: 60vh;">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Training Programs</div>
+                <h1>Our Courses</h1>
+                <p>Industry-relevant training programs designed for your success in the modern tech landscape</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">☁️</div>
+                        <h3>Cloud Computing & Security</h3>
+                        <p>Master cloud platforms and security</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>AWS, Azure, GCP Fundamentals</li>
+                            <li>Cloud Security Best Practices</li>
+                            <li>DevOps & CI/CD Automation</li>
+                            <li>Infrastructure as Code (Terraform)</li>
+                            <li>Container & Kubernetes</li>
+                            <li>Cloud Monitoring & Optimization</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Duration</div>
+                                <div class="meta-value">3-6 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level</div>
+                                <div class="meta-value">All Levels</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🔒</div>
+                        <h3>Cybersecurity Ethical Hacking</h3>
+                        <p>Become a certified ethical hacker</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Network Security Essentials</li>
+                            <li>Ethical Hacking Techniques</li>
+                            <li>Web & Mobile App Pentesting</li>
+                            <li>Vulnerability Assessment Tools</li>
+                            <li>SIEM & SOC Operations</li>
+                            <li>Incident Response & Forensics</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Duration</div>
+                                <div class="meta-value">3-6 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level</div>
+                                <div class="meta-value">All Levels</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🧠</div>
+                        <h3>AI/ML & Data Science</h3>
+                        <p>Master artificial intelligence</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Python for Data Science</li>
+                            <li>Machine Learning Algorithms</li>
+                            <li>Deep Learning & Neural Networks</li>
+                            <li>Computer Vision & NLP</li>
+                            <li>Data Visualization & Analytics</li>
+                            <li>Model Deployment & MLOps</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Duration</div>
+                                <div class="meta-value">4-6 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level</div>
+                                <div class="meta-value">All Levels</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🤖</div>
+                        <h3>AIDS - AI/ML Tech Field</h3>
+                        <p>Advanced AI & intelligent systems</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Artificial Intelligence Foundations</li>
+                            <li>Advanced Deep Learning</li>
+                            <li>Automated Systems Design</li>
+                            <li>Reinforcement Learning</li>
+                            <li>AI Model Optimization</li>
+                            <li>Enterprise AI Applications</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Duration</div>
+                                <div class="meta-value">4-6 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level</div>
+                                <div class="meta-value">Advanced</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>What's Included</h3>
+                <p>All courses include practical training, industry projects, expert mentorship, certification, and lifetime placement support with limited seats to ensure personalized attention.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERNSHIP PAGE -->
+    <section id="internship" class="page-section">
+        <div class="hero" style="min-height: 60vh;">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Professional Growth</div>
+                <h1>Internship Programs</h1>
+                <p>Gain practical experience and kickstart your tech career with real industry exposure</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <div class="section-badge">Build Your Future</div>
+                <h2 class="section-title">Professional Internships</h2>
+                <p class="section-subtitle">Get hands-on experience with real industry projects and expert mentorship</p>
+            </div>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">💻</div>
+                        <h3>Technical Internships</h3>
+                        <p>Hands-on industry experience</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Cloud Computing Intern</li>
+                            <li>Cybersecurity Analyst Intern</li>
+                            <li>AI/ML Developer Intern</li>
+                            <li>Data Science Intern</li>
+                            <li>DevOps Engineer Intern</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Duration</div>
+                                <div class="meta-value">2-6 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Stipend</div>
+                                <div class="meta-value">Performance Based</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">📊</div>
+                        <h3>Project-Based Learning</h3>
+                        <p>Real-world project experience</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Industry-Standard Tools & Technologies</li>
+                            <li>Live Project Assignments</li>
+                            <li>Expert Mentorship & Code Reviews</li>
+                            <li>Portfolio Development</li>
+                            <li>Weekly Progress Evaluations</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Projects</div>
+                                <div class="meta-value">3-5 Projects</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Certificate</div>
+                                <div class="meta-value">Yes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🎯</div>
+                        <h3>Career Benefits</h3>
+                        <p>Complete career support</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Professional Experience Certificate</li>
+                            <li>Letter of Recommendation</li>
+                            <li>Guaranteed Job Placement Assistance</li>
+                            <li>Industry Networking Opportunities</li>
+                            <li>Resume & LinkedIn Optimization</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Placement</div>
+                                <div class="meta-value">Guaranteed</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Network</div>
+                                <div class="meta-value">50+ Companies</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid" style="margin-top: 4rem;">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Certificate of Completion</h3>
+                    <p>Receive official internship completion certificate recognized by industry leaders</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Job-Ready Skills</h3>
+                    <p>Develop practical skills that employers are actively seeking in the market</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Expert Mentorship</h3>
+                    <p>Get guidance from experienced professionals throughout your internship journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLACEMENT PAGE -->
+    <section id="placement" class="page-section">
+        <div class="hero" style="min-height: 60vh;">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Career Success</div>
+                <h1>Placement Cell</h1>
+                <p>100% Guaranteed Job Placement Assistance Across All Sectors</p>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Students Placed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Partner Companies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">₹4.5L</div>
+                    <div class="stat-label">Average Package</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Placement Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <div class="section-badge">All Sectors</div>
+                <h2 class="section-title">Job Placement Solutions</h2>
+                <p class="section-subtitle">IT | Non-IT | Cybersecurity | AI/ML | Private Sector | MNCs | Banking</p>
+            </div>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">💼</div>
+                        <h3>IT Sector (MNC)</h3>
+                        <p>Leading tech companies</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Software Development Engineer</li>
+                            <li>Cloud Solutions Architect</li>
+                            <li>DevOps Engineer</li>
+                            <li>System Administrator</li>
+                            <li>Technical Support Engineer</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Salary Range</div>
+                                <div class="meta-value">₹3-8 LPA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">📊</div>
+                        <h3>Non-IT Sector</h3>
+                        <p>Diverse opportunities</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Business Analyst</li>
+                            <li>Project Manager</li>
+                            <li>Sales & Marketing Executive</li>
+                            <li>HR Operations Specialist</li>
+                            <li>Operations Manager</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Salary Range</div>
+                                <div class="meta-value">₹2.5-6 LPA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🔒</div>
+                        <h3>Cybersecurity</h3>
+                        <p>Security specialists</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Security Analyst</li>
+                            <li>Penetration Tester</li>
+                            <li>SOC Analyst</li>
+                            <li>Security Consultant</li>
+                            <li>Incident Response Specialist</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Salary Range</div>
+                                <div class="meta-value">₹4-10 LPA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🤖</div>
+                        <h3>AI & Machine Learning</h3>
+                        <p>Cutting-edge technology</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Machine Learning Engineer</li>
+                            <li>Data Scientist</li>
+                            <li>AI Developer</li>
+                            <li>Research Analyst</li>
+                            <li>Algorithm Developer</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Salary Range</div>
+                                <div class="meta-value">₹5-12 LPA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🏢</div>
+                        <h3>Private Sector</h3>
+                        <p>Dynamic companies</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Startups & Product Companies</li>
+                            <li>Service-Based Organizations</li>
+                            <li>Consulting Firms</li>
+                            <li>Technology Enterprises</li>
+                            <li>Digital Agencies</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Salary Range</div>
+                                <div class="meta-value">₹3-8 LPA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🏦</div>
+                        <h3>Banking / MNC</h3>
+                        <p>Financial institutions</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Banking Operations Associate</li>
+                            <li>Financial Analyst</li>
+                            <li>Risk Management Specialist</li>
+                            <li>Compliance Officer</li>
+                            <li>IT Security Analyst</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Salary Range</div>
+                                <div class="meta-value">₹3.5-9 LPA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Placement Features</h3>
+                <p>Work From Home & Work From Office Opportunities • Freshers & Experienced Welcome • High Salary Packages • Career Growth • Permanent Job Opportunities</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.2rem; color: var(--accent-blue); margin-bottom: 0.5rem;">📍 Location: Narhegaon, Pune</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US PAGE -->
+    <section id="about" class="page-section">
+        <div class="hero" style="min-height: 60vh;">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Who We Are</div>
+                <h1>About Hexasecure</h1>
+                <p>Empowering careers through quality education and industry-focused training</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom: 5rem;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem;">Our Story</h2>
+                <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 2rem;">
+                    Hexasecure Technologies Pvt. Ltd. is a leading provider of professional IT training and placement services in Pune. Founded with a vision to bridge the gap between academia and industry, we have successfully trained and placed hundreds of students in top companies across India.
+                </p>
+                <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-secondary);">
+                    We specialize in cutting-edge technologies including Cloud Computing, Cybersecurity, Artificial Intelligence, and Machine Learning. Our comprehensive training programs are designed by industry experts and delivered through a perfect blend of theoretical knowledge and practical hands-on experience.
+                </p>
+            </div>
+
+            <div class="stats-section" style="margin: 5rem 0;">
+                <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px;">
+                    <div class="stat-card">
+                        <div style="width: 120px; height: 120px; margin: 0 auto 2rem; background: var(--gradient-gold); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary-bg);">✓</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">ISO 9001:2015</h3>
+                        <p style="color: var(--text-muted);">Quality Management Certified</p>
+                    </div>
+                    <div class="stat-card">
+                        <div style="width: 120px; height: 120px; margin: 0 auto 2rem; background: var(--gradient-blue); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary-bg);">✓</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">MSME Registered</h3>
+                        <p style="color: var(--text-muted);">Government Recognized</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <div class="section-badge">Our Foundation</div>
+                <h2 class="section-title">Mission & Values</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>To provide world-class technical education and ensure 100% placement success for every student through industry-relevant training and dedicated career support.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3>Our Vision</h3>
+                    <p>To become India's most trusted technology education partner, empowering students with skills that transform careers and drive innovation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Our Values</h3>
+                    <p>Excellence in education, integrity in operations, innovation in teaching methods, and unwavering commitment to student success.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Why Students Choose Us</h3>
+                <p>Expert faculty with 10+ years experience • Modern curriculum aligned with industry • State-of-the-art labs • Strong network with 50+ companies • Personalized attention with small batches • Lifetime career support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page-section">
+        <div class="hero" style="min-height: 60vh;">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Get In Touch</div>
+                <h1>Contact Us</h1>
+                <p>Ready to transform your career? Let's start the conversation</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 91582 80725</p>
+                            <p>+91 93227 06354</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="573e393138173f322f362432342225322332343f39383b38303e32247934383a">[email&#160;protected]</a></p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3657525b5f45455f595845765e534e574553554344534253555e58595a59515f53451855595b">[email&#160;protected]</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Narhegaon, Pune</p>
+                            <p>Maharashtra, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h3>Website</h3>
+                            <p>www.hexasecuretechnologies.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="course">Interested Course</label>
+                            <select id="course" name="course">
+                                <option value="">Select a course</option>
+                                <option value="cloud">Cloud Computing & Security</option>
+                                <option value="cybersecurity">Cybersecurity Ethical Hacking</option>
+                                <option value="aiml">AI/ML & Data Science</option>
+                                <option value="aids">AIDS - AI/ML Tech Field</option>
+                                <option value="internship">Internship Program</option>
+                                <option value="placement">Placement Assistance</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h2>HEXASECURE</h2>
+                    <p>Technologies Pvt. Ltd.</p>
+                </div>
+                <p>Professional IT Training & Placement Services. Transforming careers through quality education and industry partnerships.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📞 +91 91582 80725</p>
+                <p>📞 +91 93227 06354</p>
+                <p>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3daddd5dcf3dbd6cbd2c0d6d0c6c1d6c7d6d0dbdddcdfdcd4dad6c09dd0dcde">[email&#160;protected]</a></p>
+                <p>📍 Narhegaon, Pune, Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hexasecure Technologies Pvt. Ltd. All rights reserved.</p>
+            <div class="footer-certifications">
+                <div class="footer-cert">
+                    <span class="footer-cert-icon">✓</span>
+                    <span>ISO 9001:2015 Certified</span>
+                </div>
+                <div class="footer-cert">
+                    <span class="footer-cert-icon">✓</span>
+                    <span>MSME Registered</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pageSections = document.querySelectorAll('.page-section');
+        const navbar = document.getElementById('navbar');
+        const pageTransition = document.getElementById('pageTransition');
+
+        // Page Navigation
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPage = link.getAttribute('href').substring(1);
+
+                pageTransition.classList.add('active');
+
+                setTimeout(() => {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+
+                    pageSections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetPage) {
+                            section.classList.add('active');
+                        }
+                    });
+
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                    pageTransition.classList.remove('active');
+                }, 300);
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+
+        // Footer links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && href.length > 1 && !this.classList.contains('nav-link')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection && targetSection.classList.contains('page-section')) {
+                        pageTransition.classList.add('active');
+
+                        setTimeout(() => {
+                            pageSections.forEach(section => section.classList.remove('active'));
+                            targetSection.classList.add('active');
+
+                            navLinks.forEach(link => {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === href) {
+                                    link.classList.add('active');
+                                }
+                            });
+
+                            window.scrollTo({ top: 0, behavior: 'instant' });
+                            pageTransition.classList.remove('active');
+                        }, 300);
+                    }
+                }
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
