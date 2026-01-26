@@ -313,8 +313,8 @@
         /* Features Grid */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             margin-top: 4rem;
         }
 
@@ -322,7 +322,7 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 15px;
-            padding: 3rem;
+            padding: 2rem;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -352,16 +352,16 @@
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             background: var(--secondary-bg);
             border: 1px solid var(--border-color);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
             transition: all 0.4s ease;
         }
 
@@ -466,8 +466,8 @@
         /* Programs Grid */
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
             margin-top: 4rem;
         }
 
@@ -504,15 +504,15 @@
 
         .program-header {
             background: var(--secondary-bg);
-            padding: 3rem;
+            padding: 2rem;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
             position: relative;
         }
 
         .program-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .program-header h3 {
@@ -530,7 +530,7 @@
         }
 
         .program-body {
-            padding: 3rem;
+            padding: 2rem;
         }
 
         .program-body ul {
@@ -991,6 +991,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-slider">
             <button type="button" class="nav-link active" onclick="showPage('home')">Home</button>
+            <button type="button" class="nav-link" onclick="showPage('services')">Services</button>
             <button type="button" class="nav-link" onclick="showPage('courses')">Courses</button>
             <button type="button" class="nav-link" onclick="showPage('internship')">Internship</button>
             <button type="button" class="nav-link" onclick="showPage('placement')">Placement</button>
@@ -1010,19 +1011,265 @@
         <div class="hero">
             <div class="hero-grid"></div>
             <div class="hero-content">
-                <div class="hero-badge">Professional IT Training & Placement</div>
+                <div class="hero-badge">IT Consultancy, Training & Digital Solutions</div>
                 <h1 class="company-name">HEXASECURE TECHNOLOGIES</h1>
-                <h1 style="font-size: 2rem;">Transform Your Tech Career</h1>
+                <h1 style="font-size: 2rem;">Transform Your Business & Career</h1>
            <p style="margin-top:16px; font-size:1.1rem; font-weight:700; letter-spacing:0.5px;">
-Empowering Future Tech Leaders Through Excellence in Training, Innovation in Learning, and Guaranteed Career Success<br>
+Empowering Businesses & Professionals Through Expert Consultancy, Digital Solutions, Training & Career Development<br>
 Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
 </p>
-       </div>
+            </div>
+        </div>
+
+        <!-- Services Overview -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-badge">Our Expertise</div>
+                <h2 class="section-title">Comprehensive IT Solutions</h2>
+                <p class="section-subtitle">From business consultancy to professional training - we deliver end-to-end technology solutions</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>IT Consultancy</h3>
+                    <p>Strategic technology consulting for businesses of all sizes. Digital transformation, system optimization, and technology roadmap planning.</p>
+                    <ul class="feature-list">
+                        <li>Digital Transformation Strategy</li>
+                        <li>Technology Assessment & Planning</li>
+                        <li>System Integration Solutions</li>
+                        <li>IT Infrastructure Consulting</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Professional Training</h3>
+                    <p>Industry-focused training programs designed to build expertise in cutting-edge technologies and advance careers.</p>
+                    <ul class="feature-list">
+                        <li>Cloud Computing & Security</li>
+                        <li>Cybersecurity & Ethical Hacking</li>
+                        <li>AI/ML & Data Science</li>
+                        <li>Corporate Training Programs</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Career Services</h3>
+                    <p>Complete career development support including internships, placement assistance, and professional growth guidance.</p>
+                    <ul class="feature-list">
+                        <li>Internship Programs</li>
+                        <li>100% Placement Assistance</li>
+                        <li>Resume & Interview Preparation</li>
+                        <li>Industry Networking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Why Choose Hexasecure?</h3>
+                <p>Innovative startup with fresh approach • Rapid growth and client satisfaction • Industry partnerships with 50+ companies • ISO certified quality processes • Agile development and quick turnaround • Personalized attention and competitive pricing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES PAGE -->
+    <section id="services" class="page-section">
+        <div class="hero" style="min-height: 70vh;">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Consultancy Solutions</div>
+                <h1>Our Services</h1>
+                <p>Comprehensive IT consultancy and digital transformation services for modern businesses</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <div class="section-badge">Business Solutions</div>
+                <h2 class="section-title">IT Consultancy Services</h2>
+                <p class="section-subtitle">Strategic technology consulting to drive your business forward</p>
+            </div>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🏗️</div>
+                        <h3>Digital Transformation</h3>
+                        <p>Complete digital modernization</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Digital Strategy & Roadmap</li>
+                            <li>Legacy System Modernization</li>
+                            <li>Process Automation</li>
+                            <li>Cloud Migration Planning</li>
+                            <li>Change Management</li>
+                            <li>ROI Assessment & Optimization</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Timeline</div>
+                                <div class="meta-value">3-12 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Scope</div>
+                                <div class="meta-value">Enterprise</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🔧</div>
+                        <h3>IT Infrastructure</h3>
+                        <p>Robust technology foundation</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Network Design & Implementation</li>
+                            <li>Server & Storage Solutions</li>
+                            <li>Security Architecture</li>
+                            <li>Disaster Recovery Planning</li>
+                            <li>Performance Optimization</li>
+                            <li>24/7 Monitoring & Support</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Timeline</div>
+                                <div class="meta-value">1-6 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Scope</div>
+                                <div class="meta-value">All Sizes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">☁️</div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Scalable cloud architecture</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Cloud Strategy & Planning</li>
+                            <li>AWS/Azure/GCP Implementation</li>
+                            <li>Hybrid Cloud Solutions</li>
+                            <li>Cloud Security & Compliance</li>
+                            <li>Cost Optimization</li>
+                            <li>DevOps & Automation</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Timeline</div>
+                                <div class="meta-value">2-8 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Scope</div>
+                                <div class="meta-value">SME to Enterprise</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🔒</div>
+                        <h3>Cybersecurity Consulting</h3>
+                        <p>Comprehensive security solutions</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Security Assessment & Audit</li>
+                            <li>Vulnerability Management</li>
+                            <li>Compliance Framework (ISO, SOC)</li>
+                            <li>Incident Response Planning</li>
+                            <li>Security Awareness Training</li>
+                            <li>Penetration Testing</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Timeline</div>
+                                <div class="meta-value">1-4 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Scope</div>
+                                <div class="meta-value">All Industries</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">📊</div>
+                        <h3>Data & Analytics</h3>
+                        <p>Data-driven business insights</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Data Strategy & Governance</li>
+                            <li>Business Intelligence Solutions</li>
+                            <li>AI/ML Implementation</li>
+                            <li>Data Warehouse Design</li>
+                            <li>Analytics Dashboard Development</li>
+                            <li>Predictive Analytics</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Timeline</div>
+                                <div class="meta-value">2-6 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Scope</div>
+                                <div class="meta-value">Data-Driven Orgs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">🎓</div>
+                        <h3>Corporate Training</h3>
+                        <p>Upskill your workforce</p>
+                    </div>
+                    <div class="program-body">
+                        <ul>
+                            <li>Custom Training Programs</li>
+                            <li>Technology Skills Development</li>
+                            <li>Leadership & Management Training</li>
+                            <li>Certification Preparation</li>
+                            <li>On-site & Remote Delivery</li>
+                            <li>Progress Tracking & Assessment</li>
+                        </ul>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Timeline</div>
+                                <div class="meta-value">1-3 Months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Scope</div>
+                                <div class="meta-value">Teams & Individuals</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Our Consulting Approach</h3>
+                <p>Discovery & Assessment • Strategic Planning • Implementation • Testing & Optimization • Training & Support • Continuous Improvement</p>
+            </div>
+        </div>
     </section>
 
     <!-- COURSES PAGE -->
     <section id="courses" class="page-section">
-        <div class="hero" style="min-height: 60vh;">
+        <div class="hero" style="min-height: 70vh;">
             <div class="hero-grid"></div>
             <div class="hero-content">
                 <div class="hero-badge">Training Programs</div>
@@ -1155,7 +1402,7 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
 
     <!-- INTERNSHIP PAGE -->
     <section id="internship" class="page-section">
-        <div class="hero" style="min-height: 60vh;">
+        <div class="hero" style="min-height: 70vh;">
             <div class="hero-grid"></div>
             <div class="hero-content">
                 <div class="hero-badge">Professional Growth</div>
@@ -1276,7 +1523,7 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
 
     <!-- PLACEMENT PAGE -->
     <section id="placement" class="page-section">
-        <div class="hero" style="min-height: 60vh;">
+        <div class="hero" style="min-height: 70vh;">
             <div class="hero-grid"></div>
             <div class="hero-content">
                 <div class="hero-badge">Career Success</div>
@@ -1466,7 +1713,7 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
 
     <!-- ABOUT US PAGE -->
     <section id="about" class="page-section">
-        <div class="hero" style="min-height: 60vh;">
+        <div class="hero" style="min-height: 70vh;">
             <div class="hero-grid"></div>
             <div class="hero-content">
                 <div class="hero-badge">Who We Are</div>
@@ -1479,10 +1726,10 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
             <div style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom: 5rem;">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem;">Our Story</h2>
                 <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 2rem;">
-                    Hexasecure Technologies Pvt. Ltd. is a leading provider of professional IT training and placement services in Pune. Founded with a vision to bridge the gap between academia and industry, we have successfully trained and placed hundreds of students in top companies across India.
+                    Hexasecure Technologies Pvt. Ltd. is a dynamic IT consultancy and training startup based in Nashik. Founded with a vision to bridge the gap between business needs and technology solutions, we have rapidly established partnerships with 50+ companies across India.
                 </p>
                 <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-secondary);">
-                    We specialize in cutting-edge technologies including Cloud Computing, Cybersecurity, Artificial Intelligence, and Machine Learning. Our comprehensive training programs are designed by industry experts and delivered through a perfect blend of theoretical knowledge and practical hands-on experience.
+                    As an innovative startup, we specialize in comprehensive IT consultancy services including Digital Transformation, Cloud Solutions, Cybersecurity, and Data Analytics. Our fresh perspective and agile approach make us unique - we deliver cutting-edge solutions with the speed and flexibility that only a startup can provide.
                 </p>
             </div>
 
@@ -1510,23 +1757,23 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
                     <h3>Our Mission</h3>
-                    <p>To provide world-class technical education and ensure 100% placement success for every student through industry-relevant training and dedicated career support.</p>
+                    <p>To provide world-class IT consultancy and training solutions that drive business transformation and career advancement through innovative technology implementations and expert guidance.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">👁️</div>
                     <h3>Our Vision</h3>
-                    <p>To become India's most trusted technology education partner, empowering students with skills that transform careers and drive innovation.</p>
+                    <p>To become India's most trusted technology partner, empowering businesses with strategic solutions and professionals with skills that drive digital innovation and growth.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⭐</div>
                     <h3>Our Values</h3>
-                    <p>Excellence in education, integrity in operations, innovation in teaching methods, and unwavering commitment to student success.</p>
+                    <p>Excellence in delivery, integrity in partnerships, innovation in solutions, and unwavering commitment to client success and professional development.</p>
                 </div>
             </div>
 
             <div class="highlight-box">
-                <h3>Why Students Choose Us</h3>
-                <p>Expert faculty with 10+ years experience • Modern curriculum aligned with industry • State-of-the-art labs • Strong network with 50+ companies • Personalized attention with small batches • Lifetime career support</p>
+                <h3>Why Choose Hexasecure?</h3>
+                <p>Dynamic startup with fresh perspective • Rapid growth and proven client satisfaction • Industry partnerships with 50+ companies • End-to-end solutions from strategy to implementation • Agile approach with personalized attention • ISO certified quality processes</p>
             </div>
         </div>
     </section>
@@ -1538,7 +1785,7 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
             <div class="hero-content">
                 <div class="hero-badge">Get In Touch</div>
                 <h1>Contact Us</h1>
-                <p>Ready to transform your career? Let's start the conversation</p>
+                <p>Ready to transform your business or advance your career? Let's discuss your needs</p>
             </div>
         </div>
 
@@ -1558,8 +1805,7 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
                         <div class="contact-icon">📧</div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="573e393138173f322f362432342225322332343f39383b38303e32247934383a">[email&#160;protected]</a></p>
-                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3657525b5f45455f595845765e534e574553554344534253555e58595a59515f53451855595b">[email&#160;protected]</a></p>
+                            <p><a href="mailto:admin@hexasecuretechnologies.com">admin@hexasecuretechnologies.com</a></p>
                         </div>
                     </div>
 
@@ -1567,7 +1813,7 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
                         <div class="contact-icon">📍</div>
                         <div class="contact-details">
                             <h3>Location</h3>
-                            <p>Narhegaon, Pune</p>
+                            <p>Amrutdham , Nashik</p>
                             <p>Maharashtra, India</p>
                         </div>
                     </div>
@@ -1609,13 +1855,19 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
                         </div>
 
                         <div class="form-group">
-                            <label for="course">Interested Course</label>
+                            <label for="course">Service Interest</label>
                             <select id="course" name="course">
-                                <option value="">Select a course</option>
-                                <option value="cloud">Cloud Computing & Security</option>
-                                <option value="cybersecurity">Cybersecurity Ethical Hacking</option>
-                                <option value="aiml">AI/ML & Data Science</option>
-                                <option value="aids">AIDS - AI/ML Tech Field</option>
+                                <option value="">Select a service</option>
+                                <option value="digital-transformation">Digital Transformation Consulting</option>
+                                <option value="it-infrastructure">IT Infrastructure Solutions</option>
+                                <option value="cloud-solutions">Cloud Solutions & Migration</option>
+                                <option value="cybersecurity-consulting">Cybersecurity Consulting</option>
+                                <option value="data-analytics">Data & Analytics Solutions</option>
+                                <option value="corporate-training">Corporate Training Programs</option>
+                                <option value="cloud-course">Cloud Computing & Security Course</option>
+                                <option value="cybersecurity-course">Cybersecurity Ethical Hacking Course</option>
+                                <option value="aiml-course">AI/ML & Data Science Course</option>
+                                <option value="aids-course">AIDS - AI/ML Tech Field Course</option>
                                 <option value="internship">Internship Program</option>
                                 <option value="placement">Placement Assistance</option>
                             </select>
@@ -1643,15 +1895,15 @@ Approved by Government of India | ISO 9001:2015 Certified & MSME Registered
                     <h2>HEXASECURE</h2>
                     <p>Technologies Pvt. Ltd.</p>
                 </div>
-                <p>Professional IT Training & Placement Services. Transforming careers through quality education and industry partnerships.</p>
+                <p>IT Consultancy, Training & Digital Solutions. Transforming businesses through strategic technology consulting and empowering professionals through expert training programs.</p>
             </div>
 
             <div class="footer-section">
                 <h3>Contact Info</h3>
                 <p>📞 +91 91582 80725</p>
                 <p>📞 +91 93227 06354</p>
-                <p>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3daddd5dcf3dbd6cbd2c0d6d0c6c1d6c7d6d0dbdddcdfdcd4dad6c09dd0dcde">[email&#160;protected]</a></p>
-                <p>📍 Narhegaon, Pune, Maharashtra</p>
+                <p><a href="mailto:admin@hexasecuretechnologies.com">📧 admin@hexasecuretechnologies.com</a></p>
+                <p>📍 Amrutdham, Nashik, Maharashtra</p>
             </div>
         </div>
 
