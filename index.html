@@ -451,30 +451,12 @@
             </div>
             <div class="portfolio-filters">
                 <button class="filter-btn active" onclick="filterPortfolio('all', this)">All Projects</button>
-                <button class="filter-btn" onclick="filterPortfolio('corporate', this)">Corporate Websites</button>
                 <button class="filter-btn" onclick="filterPortfolio('industrial', this)">Industrial &amp; Business</button>
                 <button class="filter-btn" onclick="filterPortfolio('education', this)">Educational Websites</button>
                 <button class="filter-btn" onclick="filterPortfolio('service', this)">Service Business</button>
             </div>
 
             <div class="portfolio-grid">
-
-                <div class="portfolio-card" data-category="corporate">
-                    <div class="portfolio-preview">
-                        <iframe src="https://www.hexasecuretechnologies.com/" title="HexaSecure Technologies website preview" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
-                        <div class="portfolio-preview-overlay"></div>
-                        <span class="portfolio-category-tag">Corporate Website</span>
-                    </div>
-                    <div class="portfolio-body">
-                        <h3>HexaSecure Technologies</h3>
-                        <p class="portfolio-url">hexasecuretechnologies.com</p>
-                        <p>Our corporate website, showcasing our technology services, digital solutions and engineering capabilities.</p>
-                        <div class="portfolio-actions">
-                            <a href="https://www.hexasecuretechnologies.com/" target="_blank" rel="noopener" class="btn-visit">Visit Live Website ↗</a>
-                            <a href="#" class="btn-info" onclick="return false;">View Project</a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="portfolio-card" data-category="industrial">
                     <div class="portfolio-preview">
@@ -532,7 +514,7 @@
             <div class="highlight-box" style="margin-top:5rem;">
                 <h3>Have a website idea? Let's turn it into reality.</h3>
                 <p style="margin-bottom:2rem;">Tell us about your project and we will build a digital experience that represents your business professionally.</p>
-                <button class="btn" style="background:var(--primary-bg);color:var(--text-primary);border:2px solid var(--primary-bg);font-size:1rem;" onclick="showPage('contact', document.querySelectorAll('.nav-link')[4])">Start Your Project</button>
+                <button class="btn" style="background:var(--primary-bg);color:var(--text-primary);border:2px solid var(--primary-bg);font-size:1rem;position:relative;z-index:1;" onclick="showPage('contact', document.querySelectorAll('.nav-link')[4])">Start Your Project</button>
             </div>
 
             <div class="section-header" style="margin-top:6rem;margin-bottom:3rem;">
