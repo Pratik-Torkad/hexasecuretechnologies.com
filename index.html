@@ -9,9 +9,9 @@
     <meta property="og:description" content="HexaSecure Technologies provides software development, cloud and DevOps, cybersecurity, AI and data science solutions for businesses in India and worldwide.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hexasecuretechnologies.com/">
-    <meta name="keywords" content="IT Services Company, Software Development Company, Cloud Computing Services, AWS Cloud Solutions, DevOps Services, Cybersecurity Services, Penetration Testing, AI Development, Data Science Solutions, SaaS Product Development, IT Consulting">
+    <meta name="keywords" content="IT Services Company, Software Development Company, Cloud Computing Services, AWS Cloud Solutions, DevOps Services, Cybersecurity Services, Penetration Testing, AI Solutions, Data Science">
     <link rel="icon" type="image/png" href="/hexasecure-favicon.png">
-<link rel="apple-touch-icon" href="/hexasecure-favicon.png">    
+    <link rel="apple-touch-icon" href="/hexasecure-favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         function showPage(pageId, clickedEl) {
@@ -47,24 +47,24 @@
 
         .navbar { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; transition: all 0.3s ease; }
         .navbar.scrolled { top: 10px; }
-        .nav-slider { display: flex; align-items: center; gap: 0; background: rgba(20, 20, 20, 0.95); backdrop-filter: blur(20px); border: 1px solid var(--border-color); border-radius: 50px; padding: 0.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
-        .nav-link { padding: 0.75rem 1.75rem; background: transparent; border: none; border-radius: 50px; color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 0.95rem; white-space: nowrap; transition: all 0.3s ease; font-family: 'Poppins', sans-serif; cursor: pointer; outline: none; }
+        .nav-slider { display: flex; align-items: center; gap: 0; background: rgba(20, 20, 20, 0.95); backdrop-filter: blur(20px); border: 1px solid var(--border-color); border-radius: 50px; padding: 0.5rem; }
+        .nav-link { padding: 0.75rem 1.75rem; background: transparent; border: none; border-radius: 50px; color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 0.95rem; cursor: pointer; transition: all 0.3s ease; }
         .nav-link:hover { background: rgba(255,255,255,0.1); color: var(--text-primary); }
         .nav-link.active { background: var(--gradient-gold); color: var(--primary-bg); font-weight: 600; }
 
         .page-section { display: none; min-height: 100vh; }
         .page-section.active { display: block; }
 
-        .hero { margin-top: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background: radial-gradient(ellipse at center, rgba(0,212,255,0.1) 0%, transparent 70%), radial-gradient(ellipse at 80% 20%, rgba(212,175,55,0.05) 0%, transparent 50%); }
+        .hero { margin-top: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background: radial-gradient(ellipse at center, rgba(0,212,255,0.1) 0%, var(--primary-bg) 70%); }
         .hero-grid { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 50px 50px; opacity: 0.3; }
         .hero-content { max-width: 1200px; margin: 0 auto; padding: 4rem 3rem; text-align: center; position: relative; z-index: 1; animation: fadeInUp 1s ease; }
-        .hero-badge { display: inline-block; background: var(--card-bg); border: 1px solid var(--border-color); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; color: var(--accent-gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; animation: fadeInUp 1s ease 0.2s backwards; }
-        .hero h1 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: fadeInUp 1s ease 0.4s backwards; }
+        .hero-badge { display: inline-block; background: var(--card-bg); border: 1px solid var(--border-color); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; color: var(--accent-gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
+        .hero h1 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero .company-name { font-family: 'Poppins', sans-serif; font-size: 3rem; font-weight: 900; margin-bottom: 0.5rem; color: var(--accent-gold); }
         .hero p { font-size: 1.1rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.7; animation: fadeInUp 1s ease 0.6s backwards; font-family: 'Inter', sans-serif; }
         .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; animation: fadeInUp 1s ease 0.8s backwards; }
 
-        .btn { padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; letter-spacing: 1px; transition: all 0.3s ease; display: inline-block; position: relative; overflow: hidden; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; }
+        .btn { padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; letter-spacing: 1px; transition: all 0.3s ease; display: inline-block; position: relative; overflow: hidden; }
         .btn-primary { background: var(--gradient-blue); color: var(--primary-bg); }
         .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: rgba(255,255,255,0.2); transition: left 0.3s ease; }
         .btn-primary:hover::before { left: 100%; }
@@ -83,7 +83,7 @@
         .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient-blue); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
         .feature-card:hover::before { transform: scaleX(1); }
         .feature-card:hover { transform: translateY(-10px); border-color: rgba(0,212,255,0.3); box-shadow: 0 20px 60px rgba(0,212,255,0.1); }
-        .feature-icon { width: 60px; height: 60px; background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; transition: all 0.4s ease; }
+        .feature-icon { width: 60px; height: 60px; background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.5rem; transition: all 0.4s ease; }
         .feature-card:hover .feature-icon { background: var(--gradient-blue); border-color: var(--accent-blue); transform: rotate(10deg) scale(1.1); }
         .feature-card h3 { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); }
         .feature-card p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; }
@@ -96,7 +96,7 @@
         .stat-card { text-align: center; padding: 2rem; position: relative; }
         .stat-card::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 60%; background: var(--border-color); }
         .stat-card:last-child::after { display: none; }
-        .stat-number { font-family: 'Poppins', sans-serif; font-size: 4rem; font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem; }
+        .stat-number { font-family: 'Poppins', sans-serif; font-size: 4rem; font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .stat-label { color: var(--text-secondary); font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
 
         .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 4rem; }
@@ -118,7 +118,7 @@
         .contact-info { display: flex; flex-direction: column; gap: 2rem; }
         .contact-item { background: var(--card-bg); border: 1px solid var(--border-color); padding: 2rem; border-radius: 15px; display: flex; align-items: center; gap: 1.5rem; transition: all 0.3s ease; }
         .contact-item:hover { border-color: var(--accent-blue); transform: translateX(10px); box-shadow: 0 10px 40px rgba(0,212,255,0.1); }
-        .contact-icon { width: 60px; height: 60px; background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; transition: all 0.3s ease; flex-shrink: 0; }
+        .contact-icon { width: 60px; height: 60px; background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; transition: all 0.3s ease; }
         .contact-item:hover .contact-icon { background: var(--gradient-blue); border-color: var(--accent-blue); }
         .contact-details h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary); }
         .contact-details p { color: var(--text-secondary); font-size: 0.95rem; }
@@ -128,7 +128,7 @@
         .contact-form h3 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 600; margin-bottom: 2rem; }
         .form-group { margin-bottom: 1.5rem; }
         .form-group label { display: block; margin-bottom: 0.8rem; font-weight: 600; color: var(--text-primary); font-size: 0.95rem; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 1rem 1.5rem; background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-family: inherit; font-size: 1rem; transition: all 0.3s ease; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 1rem 1.5rem; background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 1rem; transition: all 0.3s ease; }
         .form-group select option { background: var(--secondary-bg); }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-blue); background: var(--primary-bg); box-shadow: 0 0 0 3px rgba(0,212,255,0.1); }
         .form-group textarea { resize: vertical; min-height: 130px; }
@@ -140,18 +140,18 @@
         .footer-contact { display: flex; flex-direction: column; gap: 0.4rem; }
         .footer-contact a, .footer-contact span { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
         .footer-contact a:hover { color: var(--accent-blue); }
-        .footer-bottom { max-width: 1400px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border-color); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+        .footer-bottom { max-width: 1400px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border-color); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
         .footer-bottom p { color: var(--text-muted); font-size: 0.85rem; }
         .footer-certifications { display: flex; flex-wrap: wrap; gap: 1.25rem; }
         .footer-cert { display: flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.82rem; }
         .footer-cert-icon { color: var(--accent-gold); font-size: 0.9rem; }
 
         .highlight-box { background: var(--gradient-blue); padding: 4rem; border-radius: 20px; text-align: center; margin: 4rem 0; position: relative; overflow: hidden; }
-        .highlight-box::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: float 6s ease-in-out infinite; }
+        .highlight-box::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); }
         .highlight-box h3 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: var(--primary-bg); position: relative; z-index: 1; }
         .highlight-box p { font-size: 1.2rem; color: rgba(10,10,10,0.8); max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
         .page-header { padding: 7rem 3rem 3rem; background: var(--secondary-bg); border-bottom: 1px solid var(--border-color); position: relative; overflow: hidden; }
-        .page-header::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 50px 50px; opacity: 0.2; }
+        .page-header::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 50px 50px; opacity: 0.1; }
         .page-header-inner { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
         .page-header-inner .section-badge { margin-bottom: 0.75rem; }
         .page-header-inner h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.25; }
@@ -165,7 +165,7 @@
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes waPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 50% { box-shadow: 0 0 0 12px rgba(37,211,102,0); } }
-        .wa-btn { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 58px; height: 58px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: waPulse 2s infinite; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s; }
+        .wa-btn { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 58px; height: 58px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.3s ease; animation: waPulse 2s infinite; }
         .wa-btn:hover { transform: scale(1.1); }
         .wa-btn svg { width: 30px; height: 30px; fill: #fff; }
         .tech-strip { background: var(--secondary-bg); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 60px 3rem; }
@@ -176,7 +176,7 @@
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 4rem; position: relative; }
         .steps-grid::before { content: ''; position: absolute; top: 35px; left: 10%; right: 10%; height: 1px; background: var(--border-color); z-index: 0; }
         .step-card { text-align: center; padding: 2rem 1.5rem; position: relative; z-index: 1; }
-        .step-number { width: 70px; height: 70px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--accent-gold); transition: all 0.3s ease; }
+        .step-number { width: 70px; height: 70px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--accent-gold); margin: 0 auto 1.5rem; transition: all 0.3s ease; }
         .step-card:hover .step-number { background: var(--gradient-gold); color: var(--primary-bg); border-color: transparent; }
         .step-card h4 { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
         .step-card p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; }
@@ -184,7 +184,7 @@
 
         /* Portfolio Cards */
         .portfolio-filters { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 3.5rem; }
-        .filter-btn { padding: 0.6rem 1.4rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50px; color: var(--text-secondary); font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease; }
+        .filter-btn { padding: 0.6rem 1.4rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50px; color: var(--text-secondary); font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease; }
         .filter-btn:hover { border-color: var(--accent-blue); color: var(--text-primary); }
         .filter-btn.active { background: var(--gradient-gold); border-color: transparent; color: var(--primary-bg); font-weight: 600; }
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
@@ -194,13 +194,13 @@
         .portfolio-preview { position: relative; width: 100%; height: 200px; background: var(--secondary-bg); overflow: hidden; border-bottom: 1px solid var(--border-color); }
         .portfolio-preview iframe { width: 200%; height: 200%; transform: scale(0.5); transform-origin: top left; border: none; pointer-events: none; }
         .portfolio-preview-overlay { position: absolute; inset: 0; background: transparent; }
-        .portfolio-category-tag { position: absolute; top: 1rem; right: 1rem; background: rgba(10,10,10,0.85); border: 1px solid var(--border-color); padding: 0.3rem 0.9rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; color: var(--accent-gold); letter-spacing: 1px; backdrop-filter: blur(8px); }
+        .portfolio-category-tag { position: absolute; top: 1rem; right: 1rem; background: rgba(10,10,10,0.85); border: 1px solid var(--border-color); padding: 0.3rem 0.9rem; border-radius: 50px; color: var(--accent-blue); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.5px; }
         .portfolio-body { padding: 1.75rem; }
         .portfolio-body h3 { font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary); }
         .portfolio-body p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem; }
         .portfolio-url { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.25rem; word-break: break-all; }
         .portfolio-actions { display: flex; gap: 0.75rem; }
-        .portfolio-actions a { flex: 1; padding: 0.65rem 1rem; border-radius: 8px; text-align: center; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-family: 'Poppins', sans-serif; }
+        .portfolio-actions a { flex: 1; padding: 0.65rem 1rem; border-radius: 8px; text-align: center; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
         .btn-visit { background: var(--gradient-blue); color: var(--primary-bg); }
         .btn-visit:hover { transform: translateY(-2px); box-shadow: var(--shadow-blue); }
         .btn-info { background: transparent; color: var(--text-secondary); border: 1px solid var(--border-color); }
@@ -259,7 +259,7 @@
                 <div class="hero-badge">IT Services &amp; Technology Solutions</div>
                 <h1 class="company-name">HEXASECURE TECHNOLOGIES</h1>
                 <h1 style="font-size:2.2rem;">Engineering Technology. Empowering Businesses.</h1>
-                <p style="margin-top:1.5rem;">HexaSecure Technologies delivers innovative software development, cloud infrastructure, cybersecurity, and AI-powered solutions that help businesses innovate, operate securely, and scale with confidence.</p>
+                <p style="margin-top:1.5rem;">HexaSecure Technologies delivers innovative software development, cloud infrastructure, cybersecurity, and AI-powered solutions that help businesses across India and worldwide accelerate growth and transform digitally.</p>
                 <div class="cta-buttons">
                     <button class="btn btn-primary" onclick="showPage('work', document.querySelectorAll('.nav-link')[2])">Our Work &amp; Products</button>
                     <button class="btn btn-secondary" onclick="showPage('contact', document.querySelectorAll('.nav-link')[4])">Let's Discuss Your Project</button>
@@ -374,369 +374,66 @@
 
         <div class="section">
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏦</div>
-                    <h3>Banking &amp; Financial Services</h3>
-                    <p>Secure, compliant and scalable technology solutions for banks, NBFCs, fintech companies and financial institutions.</p>
-                    <ul class="feature-list">
-                        <li>Core Banking Software</li>
-                        <li>Payment &amp; Transaction Systems</li>
-                        <li>Regulatory Compliance Solutions</li>
-                        <li>Fraud Detection &amp; Security</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏥</div>
-                    <h3>Healthcare</h3>
-                    <p>Digital health platforms, patient management systems and data solutions that improve care delivery and operational efficiency.</p>
-                    <ul class="feature-list">
-                        <li>Hospital Management Systems</li>
-                        <li>Patient Data &amp; EHR Platforms</li>
-                        <li>Telemedicine Solutions</li>
-                        <li>Healthcare Data Analytics</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎓</div>
-                    <h3>Education &amp; EdTech</h3>
-                    <p>Learning management systems, EdTech platforms and digital tools that enhance educational delivery and student engagement.</p>
-                    <ul class="feature-list">
-                        <li>Learning Management Systems</li>
-                        <li>EdTech Platform Development</li>
-                        <li>Student Information Systems</li>
-                        <li>Online Assessment Tools</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛒</div>
-                    <h3>Retail &amp; E-commerce</h3>
-                    <p>E-commerce platforms, inventory management and customer experience solutions that drive sales and operational efficiency.</p>
-                    <ul class="feature-list">
-                        <li>E-commerce Platform Development</li>
-                        <li>Inventory &amp; Order Management</li>
-                        <li>Customer Analytics</li>
-                        <li>Omnichannel Solutions</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>IT &amp; Technology</h3>
-                    <p>Technology solutions for IT companies, software firms and technology-driven businesses looking to scale and innovate.</p>
-                    <ul class="feature-list">
-                        <li>SaaS Product Development</li>
-                        <li>DevOps &amp; Cloud Modernisation</li>
-                        <li>Security &amp; Compliance</li>
-                        <li>Technology Consulting</li>
-                    </ul>
-                </div>
-
+                <div class="feature-card"><div class="feature-icon">🏦</div><h3>Banking &amp; Financial Services</h3><p>Secure, compliant and scalable technology solutions for banks, NBFCs, fintech companies and financial institutions.</p><ul class="feature-list"><li>Core Banking Software</li><li>Payment &amp; Transaction Systems</li><li>Regulatory Compliance Solutions</li><li>Fraud Detection &amp; Security</li></ul></div>
+                <div class="feature-card"><div class="feature-icon">🏥</div><h3>Healthcare</h3><p>Digital health platforms, patient management systems and data solutions that improve care delivery and operational efficiency.</p><ul class="feature-list"><li>Hospital Management Systems</li><li>Patient Data &amp; EHR Platforms</li><li>Telemedicine Solutions</li><li>Healthcare Data Analytics</li></ul></div>
+                <div class="feature-card"><div class="feature-icon">🎓</div><h3>Education &amp; EdTech</h3><p>Learning management systems, EdTech platforms and digital tools that enhance educational delivery and student engagement.</p><ul class="feature-list"><li>Learning Management Systems</li><li>EdTech Platform Development</li><li>Student Information Systems</li><li>Online Assessment Tools</li></ul></div>
+                <div class="feature-card"><div class="feature-icon">🛒</div><h3>Retail &amp; E-commerce</h3><p>E-commerce platforms, inventory management and customer experience solutions that drive sales and operational efficiency.</p><ul class="feature-list"><li>E-commerce Platform Development</li><li>Inventory &amp; Order Management</li><li>Customer Analytics</li><li>Omnichannel Solutions</li></ul></div>
+                <div class="feature-card"><div class="feature-icon">💡</div><h3>IT &amp; Technology</h3><p>Technology solutions for IT companies, software firms and technology-driven businesses looking to scale and innovate.</p><ul class="feature-list"><li>SaaS Product Development</li><li>DevOps &amp; Cloud Modernisation</li><li>Security &amp; Compliance</li><li>Technology Consulting</li></ul></div>
             </div>
         </div>
     </section>
 
     <!-- WORK & PRODUCTS PAGE -->
     <section id="work" class="page-section">
-        <div class="page-header">
-            <div class="page-header-inner">
-                <div class="section-badge">Work &amp; Products</div>
-                <h1>Our Portfolio &amp; In-House Products</h1>
-                <p>Explore websites we've built for clients and the digital products we are developing under the HexaSecure brand.</p>
-            </div>
-        </div>
-
+        <div class="page-header"><div class="page-header-inner"><div class="section-badge">Work &amp; Products</div><h1>Our Portfolio &amp; In-House Products</h1><p>Explore websites we've built for clients and the digital products we are developing under the HexaSecure brand.</p></div></div>
         <div class="section">
-            <div class="section-header" style="margin-bottom:3rem;">
-                <div class="section-badge">Client Portfolio</div>
-                <h2 class="section-title">Digital Experiences We've Built</h2>
-            </div>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" onclick="filterPortfolio('all', this)">All Projects</button>
-                <button class="filter-btn" onclick="filterPortfolio('industrial', this)">Industrial &amp; Business</button>
-                <button class="filter-btn" onclick="filterPortfolio('education', this)">Educational Websites</button>
-                <button class="filter-btn" onclick="filterPortfolio('service', this)">Service Business</button>
-            </div>
-
+            <div class="section-header" style="margin-bottom:3rem;"><div class="section-badge">Client Portfolio</div><h2 class="section-title">Digital Experiences We've Built</h2></div>
+            <div class="portfolio-filters"><button class="filter-btn active" onclick="filterPortfolio('all', this)">All Projects</button><button class="filter-btn" onclick="filterPortfolio('industrial', this)">Industrial &amp; Business</button><button class="filter-btn" onclick="filterPortfolio('education', this)">Educational Websites</button><button class="filter-btn" onclick="filterPortfolio('service', this)">Service Business</button></div>
             <div class="portfolio-grid">
-
-                <div class="portfolio-card" data-category="industrial">
-                    <div class="portfolio-preview">
-                        <iframe src="https://stuginsol.com/" title="STUG Innovative Solutions website preview" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
-                        <div class="portfolio-preview-overlay"></div>
-                        <span class="portfolio-category-tag">Industrial &amp; Business</span>
-                    </div>
-                    <div class="portfolio-body">
-                        <h3>STUG Innovative Solutions</h3>
-                        <p class="portfolio-url">stuginsol.com</p>
-                        <p>A business website showcasing industrial engineering products, services and company offerings.</p>
-                        <div class="portfolio-actions">
-                            <a href="https://stuginsol.com/" target="_blank" rel="noopener" class="btn-visit">Visit Live Website ↗</a>
-                            <a href="#" class="btn-info" onclick="return false;">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" data-category="education">
-                    <div class="portfolio-preview">
-                        <iframe src="https://osakajapaneseclasses.in/" title="Osaka Japanese Classes website preview" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
-                        <div class="portfolio-preview-overlay"></div>
-                        <span class="portfolio-category-tag">Education Website</span>
-                    </div>
-                    <div class="portfolio-body">
-                        <h3>Osaka Japanese Classes</h3>
-                        <p class="portfolio-url">osakajapaneseclasses.in</p>
-                        <p>An educational website presenting Japanese language learning services and learning opportunities.</p>
-                        <div class="portfolio-actions">
-                            <a href="https://osakajapaneseclasses.in/" target="_blank" rel="noopener" class="btn-visit">Visit Live Website ↗</a>
-                            <a href="#" class="btn-info" onclick="return false;">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" data-category="service">
-                    <div class="portfolio-preview">
-                        <iframe src="https://maaydrycleaner.com/" title="Maay Dry Cleaners website preview" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
-                        <div class="portfolio-preview-overlay"></div>
-                        <span class="portfolio-category-tag">Service Business</span>
-                    </div>
-                    <div class="portfolio-body">
-                        <h3>Maay Dry Cleaners</h3>
-                        <p class="portfolio-url">maaydrycleaner.com</p>
-                        <p>A service business website showcasing dry-cleaning services and business information.</p>
-                        <div class="portfolio-actions">
-                            <a href="https://maaydrycleaner.com/" target="_blank" rel="noopener" class="btn-visit">Visit Live Website ↗</a>
-                            <a href="#" class="btn-info" onclick="return false;">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
+                <div class="portfolio-card" data-category="industrial"><div class="portfolio-preview"><iframe src="https://stuginsol.com/" title="STUG Innovative Solutions website preview" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><div class="portfolio-preview-overlay"></div><span class="portfolio-category-tag">Industrial &amp; Business</span></div><div class="portfolio-body"><h3>STUG Innovative Solutions</h3><p class="portfolio-url">stuginsol.com</p><p>A business website showcasing industrial engineering products, services and company offerings.</p><div class="portfolio-actions"><a href="https://stuginsol.com/" target="_blank" rel="noopener" class="btn-visit">Visit Live Website ↗</a><a href="#" class="btn-info" onclick="return false;">View Project</a></div></div></div>
+                <div class="portfolio-card" data-category="education"><div class="portfolio-preview"><iframe src="https://osakajapaneseclasses.in/" title="Osaka Japanese Classes website preview" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><div class="portfolio-preview-overlay"></div><span class="portfolio-category-tag">Education Website</span></div><div class="portfolio-body"><h3>Osaka Japanese Classes</h3><p class="portfolio-url">osakajapaneseclasses.in</p><p>An educational website presenting Japanese language learning services and learning opportunities.</p><div class="portfolio-actions"><a href="https://osakajapaneseclasses.in/" target="_blank" rel="noopener" class="btn-visit">Visit Live Website ↗</a><a href="#" class="btn-info" onclick="return false;">View Project</a></div></div></div>
+                <div class="portfolio-card" data-category="service"><div class="portfolio-preview"><iframe src="https://maaydrycleaner.com/" title="Maay Dry Cleaners website preview" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><div class="portfolio-preview-overlay"></div><span class="portfolio-category-tag">Service Business</span></div><div class="portfolio-body"><h3>Maay Dry Cleaners</h3><p class="portfolio-url">maaydrycleaner.com</p><p>A service business website showcasing dry-cleaning services and business information.</p><div class="portfolio-actions"><a href="https://maaydrycleaner.com/" target="_blank" rel="noopener" class="btn-visit">Visit Live Website ↗</a><a href="#" class="btn-info" onclick="return false;">View Project</a></div></div></div>
             </div>
 
-            <div class="highlight-box" style="margin-top:5rem;">
-                <h3>Have a website idea? Let's turn it into reality.</h3>
-                <p style="margin-bottom:2rem;">Tell us about your project and we will build a digital experience that represents your business professionally.</p>
-                <button class="btn" style="background:var(--primary-bg);color:var(--text-primary);border:2px solid var(--primary-bg);font-size:1rem;position:relative;z-index:1;" onclick="showPage('contact', document.querySelectorAll('.nav-link')[4])">Start Your Project</button>
-            </div>
+            <div class="highlight-box" style="margin-top:5rem;"><h3>Have a website idea? Let's turn it into reality.</h3><p style="margin-bottom:2rem;">Tell us about your project and we will build a digital experience that represents your business professionally.</p><button class="btn" style="background:var(--primary-bg);color:var(--text-primary);border:2px solid var(--primary-bg);font-size:1rem;position:relative;z-index:1;" onclick="showPage('contact', document.querySelectorAll('.nav-link')[4])">Let's Discuss Your Project →</button></div>
 
-            <div class="section-header" style="margin-top:6rem;margin-bottom:3rem;">
-                <div class="section-badge">In-House Automation Products</div>
-                <h2 class="section-title">HexaSecure Product Suite</h2>
-                <p class="section-subtitle">We are building a suite of business automation and productivity tools under the HexaSecure brand. Each product is identified by its current development status.</p>
-            </div>
-
+            <div class="section-header" style="margin-top:6rem;margin-bottom:3rem;"><div class="section-badge">In-House Automation Products</div><h2 class="section-title">HexaSecure Product Suite</h2><p class="section-subtitle">We are building a suite of business automation and productivity tools under the HexaSecure brand.</p></div>
             <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-header">
-                        <div class="program-icon">⚡</div>
-                        <h3>HexaFlow</h3>
-                        <p>Business Workflow Automation</p>
-                    </div>
-                    <div class="program-body">
-                        <span class="product-status status-complete">Completed</span>
-                        <ul>
-                            <li>Visual workflow builder</li>
-                            <li>Multi-step process automation</li>
-                            <li>Third-party app integrations</li>
-                            <li>Real-time task tracking</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-header">
-                        <div class="program-icon">🚌</div>
-                        <h3>Student Bus Monitoring System</h3>
-                        <p>Real-Time School Bus Tracking &amp; Safety</p>
-                    </div>
-                    <div class="program-body">
-                        <span class="product-status status-dev">Under Development</span>
-                        <ul>
-                            <li>Live GPS tracking of school buses</li>
-                            <li>Parent mobile app with alerts</li>
-                            <li>Driver attendance &amp; route management</li>
-                            <li>School admin dashboard</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-header">
-                        <div class="program-icon">🏞️</div>
-                        <h3>MTDC Tourist Tracking System</h3>
-                        <p>Government Tourism Fleet &amp; Visitor Management</p>
-                    </div>
-                    <div class="program-body">
-                        <span class="product-status status-dev">Under Development</span>
-                        <ul>
-                            <li>Real-time tourist vehicle tracking</li>
-                            <li>Route planning &amp; itinerary management</li>
-                            <li>Government admin control panel</li>
-                            <li>Tourist check-in &amp; reporting system</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-header">
-                        <div class="program-icon">📊</div>
-                        <h3>HexaMonitor</h3>
-                        <p>Infrastructure &amp; Uptime Monitoring</p>
-                    </div>
-                    <div class="program-body">
-                        <span class="product-status status-complete">Completed</span>
-                        <ul>
-                            <li>Server and application monitoring</li>
-                            <li>Real-time alerting and notifications</li>
-                            <li>Uptime and performance dashboards</li>
-                            <li>Incident log and reporting</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="program-card"><div class="program-header"><div class="program-icon">⚡</div><h3>HexaFlow</h3><p>Business Workflow Automation</p></div><div class="program-body"><span class="product-status status-complete">Completed</span><ul><li>Visual workflow builder</li><li>Multi-step process automation</li><li>Third-party app integrations</li><li>Real-time task tracking</li></ul></div></div>
+                <div class="program-card"><div class="program-header"><div class="program-icon">🚌</div><h3>Student Bus Monitoring System</h3><p>Real-Time School Bus Tracking &amp; Safety</p></div><div class="program-body"><span class="product-status status-dev">Under Development</span><ul><li>Live GPS tracking of school buses</li><li>Parent mobile app with alerts</li><li>Driver attendance &amp; route management</li><li>School admin dashboard</li></ul></div></div>
+                <div class="program-card"><div class="program-header"><div class="program-icon">🏞️</div><h3>MTDC Tourist Tracking System</h3><p>Government Tourism Fleet &amp; Visitor Management</p></div><div class="program-body"><span class="product-status status-dev">Under Development</span><ul><li>Real-time tourist vehicle tracking</li><li>Route planning &amp; itinerary management</li><li>Government admin control panel</li><li>Tourist check-in &amp; reporting system</li></ul></div></div>
+                <div class="program-card"><div class="program-header"><div class="program-icon">📊</div><h3>HexaMonitor</h3><p>Infrastructure &amp; Uptime Monitoring</p></div><div class="program-body"><span class="product-status status-complete">Completed</span><ul><li>Server and application monitoring</li><li>Real-time alerting and notifications</li><li>Uptime and performance dashboards</li><li>Incident log and reporting</li></ul></div></div>
             </div>
-
-            <div class="highlight-box">
-                <h3>Interested in Collaborating?</h3>
-                <p>If you have a product idea or want to co-develop a digital solution, we would love to hear from you. Let's build something meaningful together.</p>
-            </div>
+            <div class="highlight-box"><h3>Interested in Collaborating?</h3><p>If you have a product idea or want to co-develop a digital solution, we would love to hear from you. Let's build something meaningful together.</p></div>
         </div>
     </section>
 
     <!-- ABOUT US PAGE -->
     <section id="about" class="page-section">
-        <div class="page-header">
-            <div class="page-header-inner">
-                <div class="section-badge">Who We Are</div>
-                <h1>Technology That Moves Businesses Forward.</h1>
-                <p>An IT services and technology solutions company helping businesses solve complex challenges through modern technology.</p>
-            </div>
-        </div>
-
+        <div class="page-header"><div class="page-header-inner"><div class="section-badge">Who We Are</div><h1>Technology That Moves Businesses Forward.</h1><p>An IT services and technology solutions company helping businesses solve complex challenges through modern technology.</p></div></div>
         <div class="section">
-            <div style="max-width:900px;margin:0 auto;text-align:center;margin-bottom:5rem;">
-                <div class="section-badge">Our Story</div>
-                <h2 class="section-title" style="margin-top:1rem;">About HexaSecure Technologies</h2>
-                <p style="font-size:1.15rem;line-height:1.9;color:var(--text-secondary);margin-bottom:1.5rem;">HexaSecure Technologies is an MSME-registered IT services and technology solutions company, operating since 2023 and serving businesses across India and international markets.</p>
-                <p style="font-size:1.15rem;line-height:1.9;color:var(--text-secondary);margin-bottom:1.5rem;">Over the past two years, we have built a strong foundation delivering software engineering, cloud and DevOps, cybersecurity, artificial intelligence, and data science solutions to clients across multiple industries.</p>
-                <p style="font-size:1.15rem;line-height:1.9;color:var(--text-secondary);margin-bottom:1.5rem;">We combine technical expertise, innovative thinking, and a customer-focused approach to deliver scalable, secure and reliable solutions for businesses of all sizes.</p>
-                <p style="font-size:1.15rem;line-height:1.9;color:var(--text-secondary);">Our vision is to become a globally trusted technology partner by building reliable solutions, developing innovative products, and creating long-term value for our clients.</p>
-            </div>
+            <div style="max-width:900px;margin:0 auto;text-align:center;margin-bottom:5rem;"><div class="section-badge">Our Story</div><h2 class="section-title" style="margin-top:1rem;">About HexaSecure Technologies</h2><p style="font-size:1.15rem;line-height:1.9;color:var(--text-secondary);margin-bottom:1.5rem;">HexaSecure Technologies is an MSME-registered IT services and technology solutions company, delivering digital transformation, software engineering, cloud infrastructure and cybersecurity services to businesses across India and globally.</p><p style="font-size:1.15rem;line-height:1.9;color:var(--text-secondary);margin-bottom:1.5rem;">Over the past two years, we have built a strong foundation delivering software engineering projects, website development, cloud solutions and IT consulting to clients across multiple industry sectors.</p><p style="font-size:1.15rem;line-height:1.9;color:var(--text-secondary);margin-bottom:1.5rem;">We combine technical expertise, innovative thinking, and a customer-focused approach to deliver technology solutions that solve real business problems.</p><p style="font-size:1.15rem;line-height:1.9;color:var(--text-secondary);">Our vision is to become a globally trusted technology partner by building reliable solutions, developing innovative products and helping organisations succeed in the digital economy.</p></div>
 
-            <!-- Trust & Recognition -->
-            <div style="background:var(--secondary-bg);border:1px solid var(--border-color);border-radius:16px;padding:2.5rem 3rem;margin-bottom:4rem;">
-                <div style="text-align:center;margin-bottom:2rem;">
-                    <div class="section-badge">Trust &amp; Recognition</div>
-                    <h3 style="font-size:1.4rem;font-weight:600;margin-top:0.5rem;">Registered, Recognised &amp; Compliant</h3>
-                </div>
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;">
-                    <div style="text-align:center;padding:1.5rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
-                        <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
-                        <div style="font-weight:700;color:var(--accent-gold);font-size:0.95rem;margin-bottom:0.3rem;">MSME Registered</div>
-                        <div style="color:var(--text-muted);font-size:0.82rem;">Ministry of MSME, Govt. of India</div>
-                    </div>
-                    <div style="text-align:center;padding:1.5rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
-                        <div style="font-size:2rem;margin-bottom:0.75rem;">🇮🇳</div>
-                        <div style="font-weight:700;color:var(--accent-gold);font-size:0.95rem;margin-bottom:0.3rem;">Government Approved</div>
-                        <div style="color:var(--text-muted);font-size:0.82rem;">Recognised IT Services Company</div>
-                    </div>
-                    <div style="text-align:center;padding:1.5rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
-                        <div style="font-size:2rem;margin-bottom:0.75rem;">📋</div>
-                        <div style="font-weight:700;color:var(--accent-gold);font-size:0.95rem;margin-bottom:0.3rem;">GST Registered</div>
-                        <div style="color:var(--text-muted);font-size:0.82rem;">Goods &amp; Services Tax Compliant</div>
-                    </div>
-                    <div style="text-align:center;padding:1.5rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
-                        <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
-                        <div style="font-weight:700;color:var(--accent-gold);font-size:0.95rem;margin-bottom:0.3rem;">Est. 2023</div>
-                        <div style="color:var(--text-muted);font-size:0.82rem;">2+ Years in Operation</div>
-                    </div>
-                </div>
-            </div>
+            <div style="background:var(--secondary-bg);border:1px solid var(--border-color);border-radius:16px;padding:2.5rem 3rem;margin-bottom:4rem;"><div style="text-align:center;margin-bottom:2rem;"><div class="section-badge">Trust &amp; Recognition</div><h3 style="font-size:1.4rem;font-weight:600;margin-top:0.5rem;">Registered, Recognised &amp; Compliant</h3></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;"><div style="text-align:center;padding:1.5rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;"><div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div><div style="font-weight:700;color:var(--accent-gold);font-size:0.95rem;margin-bottom:0.3rem;">MSME Registered</div><div style="color:var(--text-muted);font-size:0.82rem;">Ministry of MSME, Govt. of India</div></div><div style="text-align:center;padding:1.5rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;"><div style="font-size:2rem;margin-bottom:0.75rem;">🇮🇳</div><div style="font-weight:700;color:var(--accent-gold);font-size:0.95rem;margin-bottom:0.3rem;">Government Approved</div><div style="color:var(--text-muted);font-size:0.82rem;">Recognised IT Services Company</div></div><div style="text-align:center;padding:1.5rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;"><div style="font-size:2rem;margin-bottom:0.75rem;">📋</div><div style="font-weight:700;color:var(--accent-gold);font-size:0.95rem;margin-bottom:0.3rem;">GST Registered</div><div style="color:var(--text-muted);font-size:0.82rem;">Goods &amp; Services Tax Compliant</div></div><div style="text-align:center;padding:1.5rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;"><div style="font-size:2rem;margin-bottom:0.75rem;">📅</div><div style="font-weight:700;color:var(--accent-gold);font-size:0.95rem;margin-bottom:0.3rem;">Est. 2023</div><div style="color:var(--text-muted);font-size:0.82rem;">2+ Years in Operation</div></div></div></div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Our Mission</h3>
-                    <p>To empower businesses through innovative, secure and scalable technology solutions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👁️</div>
-                    <h3>Our Vision</h3>
-                    <p>To become a globally trusted technology company delivering meaningful digital innovation.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Core Values</h3>
-                    <ul class="feature-list">
-                        <li>Innovation</li>
-                        <li>Integrity</li>
-                        <li>Excellence</li>
-                        <li>Security</li>
-                        <li>Collaboration</li>
-                        <li>Customer Success</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="features-grid"><div class="feature-card"><div class="feature-icon">🎯</div><h3>Our Mission</h3><p>To empower businesses through innovative, secure and scalable technology solutions.</p></div><div class="feature-card"><div class="feature-icon">👁️</div><h3>Our Vision</h3><p>To become a globally trusted technology company delivering meaningful digital innovation.</p></div><div class="feature-card"><div class="feature-icon">⭐</div><h3>Core Values</h3><ul class="feature-list"><li>Innovation</li><li>Integrity</li><li>Excellence</li><li>Security</li><li>Collaboration</li><li>Customer Success</li></ul></div></div>
         </div>
     </section>
 
     <!-- CONTACT PAGE -->
     <section id="contact" class="page-section">
-        <div class="page-header">
-            <div class="page-header-inner">
-                <div class="section-badge">Get In Touch</div>
-                <h1>Have a Technology Challenge? Let's Build the Solution.</h1>
-                <p>Tell us about your business requirements. Our team will get in touch to discuss the right technology solution for your needs.</p>
-            </div>
-        </div>
+        <div class="page-header"><div class="page-header-inner"><div class="section-badge">Get In Touch</div><h1>Have a Technology Challenge? Let's Build the Solution.</h1><p>Tell us about your business requirements. Our team will get in touch to discuss the right technology solution for your needs.</p></div></div>
 
         <div class="section">
             <div class="contact-grid">
                 <div class="contact-info">
-
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:admin@hexasecuretechnologies.com">admin@hexasecuretechnologies.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Survey No. 198, Tower A, GIGA SPACE IT PARK</p>
-                            <p>Unit/Suite No. 405, 4th Floor, Pune–Nagar Rd</p>
-                            <p>Clover Park, Viman Nagar, Pune, Maharashtra 411014</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🌐</div>
-                        <div class="contact-details">
-                            <h3>Website</h3>
-                            <p>www.hexasecuretechnologies.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🕐</div>
-                        <div class="contact-details">
-                            <h3>Business Hours</h3>
-                            <p>Monday – Saturday: 9:00 AM – 7:00 PM</p>
-                            <p>Sunday: Closed</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">⚡</div>
-                        <div class="contact-details">
-                            <h3>Response Time</h3>
-                            <p>We respond to all enquiries within <strong style="color:var(--accent-blue);">24 business hours</strong>.</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">💼</div>
-                        <div class="contact-details">
-                            <h3>Careers Enquiry</h3>
-                            <p>Looking to join our team? Send us your CV at <a href="mailto:admin@hexasecuretechnologies.com">admin@hexasecuretechnologies.com</a></p>
-                        </div>
-                    </div>
+                    <div class="contact-item"><div class="contact-icon">📧</div><div class="contact-details"><h3>Email</h3><p><a href="mailto:admin@hexasecuretechnologies.com">admin@hexasecuretechnologies.com</a></p></div></div>
+                    <div class="contact-item"><div class="contact-icon">📍</div><div class="contact-details"><h3>Location</h3><p>1st Floor, Metropole Building, opposite Dange Chowk BRT</p><p>Thergaon, Pimpri-Chinchwad, Pune, Maharashtra 411033</p></div></div>
+                    <div class="contact-item"><div class="contact-icon">📞</div><div class="contact-details"><h3>Phone</h3><p><a href="tel:+917385150992">7385150992</a></p></div></div>
+                    <div class="contact-item"><div class="contact-icon">🌐</div><div class="contact-details"><h3>Website</h3><p>www.hexasecuretechnologies.com</p></div></div>
+                    <div class="contact-item"><div class="contact-icon">🕐</div><div class="contact-details"><h3>Business Hours</h3><p>Monday – Saturday: 9:00 AM – 7:00 PM</p><p>Sunday: Closed</p></div></div>
+                    <div class="contact-item"><div class="contact-icon">⚡</div><div class="contact-details"><h3>Response Time</h3><p>We respond to all enquiries within <strong style="color:var(--accent-blue);">24 business hours</strong>.</p></div></div>
+                    <div class="contact-item"><div class="contact-icon">💼</div><div class="contact-details"><h3>Careers Enquiry</h3><p>Looking to join our team? Send us your CV at <a href="mailto:admin@hexasecuretechnologies.com">admin@hexasecuretechnologies.com</a></p></div></div>
                 </div>
 
                 <div class="contact-form">
@@ -745,50 +442,13 @@
                         <input type="hidden" name="_subject" value="New Project Enquiry – HexaSecure Technologies">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://www.hexasecuretechnologies.com/">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name *</label>
-                            <input type="text" id="company" name="company" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Business Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Required *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="software-development">Software Development</option>
-                                <option value="cloud-devops">Cloud &amp; DevOps</option>
-                                <option value="cybersecurity">Cybersecurity</option>
-                                <option value="ai-data-science">AI &amp; Data Science</option>
-                                <option value="product-engineering">Product Engineering &amp; R&amp;D</option>
-                                <option value="it-consulting">IT Consulting</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">Project Budget (Optional)</label>
-                            <select id="budget" name="budget">
-                                <option value="">Select a budget range</option>
-                                <option value="under-1l">Under ₹1 Lakh</option>
-                                <option value="1l-5l">₹1 Lakh – ₹5 Lakh</option>
-                                <option value="5l-20l">₹5 Lakh – ₹20 Lakh</option>
-                                <option value="20l-plus">₹20 Lakh+</option>
-                                <option value="discuss">Prefer to Discuss</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Description *</label>
-                            <textarea id="message" name="message" placeholder="Describe your project, goals and any specific requirements..." required></textarea>
-                        </div>
+                        <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required></div>
+                        <div class="form-group"><label for="company">Company Name *</label><input type="text" id="company" name="company" required></div>
+                        <div class="form-group"><label for="email">Business Email *</label><input type="email" id="email" name="email" required></div>
+                        <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required></div>
+                        <div class="form-group"><label for="service">Service Required *</label><select id="service" name="service" required><option value="">Select a service</option><option value="software-development">Software Development</option><option value="cloud-devops">Cloud &amp; DevOps</option><option value="cybersecurity">Cybersecurity</option><option value="ai-data-science">AI &amp; Data Science</option><option value="product-engineering">Product Engineering &amp; R&amp;D</option><option value="it-consulting">IT Consulting</option><option value="other">Other</option></select></div>
+                        <div class="form-group"><label for="budget">Project Budget (Optional)</label><select id="budget" name="budget"><option value="">Select a budget range</option><option value="under-1l">Under ₹1 Lakh</option><option value="1l-5l">₹1 Lakh – ₹5 Lakh</option><option value="5l-20l">₹5 Lakh – ₹20 Lakh</option><option value="20l-plus">₹20 Lakh+</option><option value="discuss">Prefer to Discuss</option></select></div>
+                        <div class="form-group"><label for="message">Project Description *</label><textarea id="message" name="message" placeholder="Describe your project, goals and any specific requirements..." required></textarea></div>
                         <button type="submit" class="btn btn-primary" style="width:100%;cursor:pointer;">Discuss Your Project</button>
                     </form>
                 </div>
@@ -799,34 +459,15 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
-            <div class="footer-logo">
-                <h2>HEXASECURE</h2>
-                <p>Technologies Pvt. Ltd.</p>
-            </div>
-            <div class="footer-contact">
-                <span>📧 admin@hexasecuretechnologies.com</span>
-                <span>📍 Survey No. 198, Tower A, GIGA SPACE IT PARK, Unit 405, 4th Floor, Viman Nagar, Pune, Maharashtra 411014</span>
-            </div>
-            <div style="display:flex;gap:0.75rem;align-items:center;">
-                <a href="https://www.linkedin.com/company/hexasecure-technologies" target="_blank" rel="noopener" title="LinkedIn" style="width:38px;height:38px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.1rem;transition:all 0.3s;" onmouseover="this.style.borderColor='#0077b5'" onmouseout="this.style.borderColor='var(--border-color)'">💼</a>
-                <a href="https://wa.me/919322706354" target="_blank" rel="noopener" title="WhatsApp" style="width:38px;height:38px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.1rem;transition:all 0.3s;" onmouseover="this.style.borderColor='#25d366'" onmouseout="this.style.borderColor='var(--border-color)'">💬</a>
-            </div>
+            <div class="footer-logo"><h2>HEXASECURE</h2><p>Technologies Pvt. Ltd.</p></div>
+            <div class="footer-contact"><span>���� admin@hexasecuretechnologies.com</span><span>📞 <a href="tel:+917385150992">7385150992</a></span><span>📍 1st Floor, Metropole Building, opposite Dange Chowk BRT, Thergaon, Pimpri-Chinchwad, Pune, Maharashtra 411033</span></div>
+            <div style="display:flex;gap:0.75rem;align-items:center;"><a href="https://www.linkedin.com/company/hexasecure-technologies" target="_blank" rel="noopener" title="LinkedIn" style="width:38px;height:38px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;font-weight:700;">in</a><a href="https://wa.me/917385150992" target="_blank" rel="noopener" title="WhatsApp" style="width:38px;height:38px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.1rem;">💬</a></div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 HexaSecure Technologies Pvt. Ltd. All rights reserved.</p>
-            <div class="footer-certifications">
-                <div class="footer-cert"><span class="footer-cert-icon">✓</span><span>MSME Registered</span></div>
-                <div class="footer-cert"><span class="footer-cert-icon">✓</span><span>Government Approved</span></div>
-                <div class="footer-cert"><span class="footer-cert-icon">✓</span><span>GST Registered</span></div>
-                <div class="footer-cert"><span class="footer-cert-icon">✓</span><span>Est. 2023</span></div>
-            </div>
-        </div>
+        <div class="footer-bottom"><p>&copy; 2025 HexaSecure Technologies Pvt. Ltd. All rights reserved.</p><div class="footer-certifications"><div class="footer-cert"><span class="footer-cert-icon">✓</span><span>MSME Registered</span></div><div class="footer-cert"><span class="footer-cert-icon">✓</span><span>Government Approved</span></div><div class="footer-cert"><span class="footer-cert-icon">✓</span><span>GST Registered</span></div><div class="footer-cert"><span class="footer-cert-icon">✓</span><span>Est. 2023</span></div></div></div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919322706354?text=Hi%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20HexaSecure%20Technologies." target="_blank" rel="noopener" class="wa-btn" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
+    <a href="https://wa.me/917385150992?text=Hi%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20HexaSecure%20Technologies." target="_blank" rel="noopener" class="wa-btn" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.22-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.495 0 .17 5.323.17 11.875c0 2.093.546 4.138 1.584 5.94L.05 24l6.33-1.66a11.84 11.84 0 005.67 1.445h.005c6.555 0 11.895-5.323 11.895-11.875a11.79 11.79 0 00-3.43-8.43zM12.055 21.785h-.004a9.83 9.83 0 01-5.013-1.372l-.36-.213-3.756.985 1.003-3.662-.234-.375A9.79 9.79 0 011.18 11.875c0-5.406 4.406-9.81 9.825-9.81a9.73 9.73 0 016.936 2.87 9.72 9.72 0 012.87 6.94c0 5.406-4.406 9.91-9.756 9.91z"/></svg></a>
 
     <script>
         const navbar = document.getElementById('navbar');
